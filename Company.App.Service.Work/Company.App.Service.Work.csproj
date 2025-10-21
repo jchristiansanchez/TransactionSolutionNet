@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Company.App.Service.Work-93760d22-4062-4156-941d-b928d7e2c815</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Serilog" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.App.Application.Interface\Company.App.Application.Interface.csproj" />
+    <ProjectReference Include="..\Company.App.Application.UseCases\Company.App.Application.UseCases.csproj" />
+    <ProjectReference Include="..\Company.App.Infrastructure\Company.App.Infrastructure.csproj" />
+    <ProjectReference Include="..\Company.App.Persistence\Company.App.Persistence.csproj" />
+  </ItemGroup>
+</Project>
