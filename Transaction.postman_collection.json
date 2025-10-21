@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "602b334a-3ac6-47eb-8f88-f80533edb234",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18746572"
+	},
+	"item": [
+		{
+			"name": "InsertTransaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidHJhbnNhY3Rpb24iLCJzdWIiOiJ1c2VyMTIzIiwibmJmIjoxNzYwOTc0NDIzLCJleHAiOjE3NjE0MDY0MjMsImlhdCI6MTc2MDk3NDQyM30.fyt93RA71siMnXycF5t1_WlTRNTDbEXwg3qrjim7O8o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sourceAccountId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"targetAccountId\": \"86269cd6-d454-4fe5-ade8-5d796c4c139b\",\r\n  \"tranferTypeId\": 1,\r\n  \"value\": 400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7144/InsertTransaction",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7144",
+					"path": [
+						"InsertTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTransaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidHJhbnNhY3Rpb24iLCJzdWIiOiJ1c2VyMTIzIiwibmJmIjoxNzYwOTc0NDIzLCJleHAiOjE3NjE0MDY0MjMsImlhdCI6MTc2MDk3NDQyM30.fyt93RA71siMnXycF5t1_WlTRNTDbEXwg3qrjim7O8o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionExternalId\":\"40e0d2cf-4a48-4ea5-bd58-d7569d5e93a3\",\r\n    \"createdAt\": \"2025-10-21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7144/GetTransaction",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7144",
+					"path": [
+						"GetTransaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
