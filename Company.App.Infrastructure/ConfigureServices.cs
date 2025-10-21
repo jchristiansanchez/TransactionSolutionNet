@@ -12,10 +12,10 @@ namespace Company.App.Infrastructure
         public static IServiceCollection AddInfrastructureInjectionServices(this IServiceCollection services, IConfiguration config, IHostEnvironment env)
         {            
             services.AddSingleton<IKafkaConsumerApproved>(sp =>
-                new KafkaConsumer("localhost:9092", "transactions-approved-group"));
+                new KafkaConsumer("localhost:9092", "transactions-approved-group", "transactions-approved"));
 
             services.AddSingleton<IKafkaConsumerRejected>(sp =>
-                new KafkaConsumer("localhost:9092", "transactions-rejected-group"));
+                new KafkaConsumer("localhost:9092", "transactions-rejected-group", "transactions-rejected"));
 
             var producerConfig = new ProducerConfig
             {

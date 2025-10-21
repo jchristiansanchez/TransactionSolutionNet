@@ -2,6 +2,6 @@
 {
     public interface IKafkaConsumer
     {
-        Task ConsumeAsync<T>(string topic, Func<T, Task> handleMessage, CancellationToken token);
+        Task ConsumeAsync<T>(Func<T, Task> handleMessage, CancellationToken token);
     }
 }
