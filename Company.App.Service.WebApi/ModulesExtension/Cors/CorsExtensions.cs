@@ -14,6 +14,7 @@
                    .AllowAnyMethod();
                 });
 
+
                 options.AddPolicy("PermitirFrontendLocal", policy =>
                 {
                     policy
